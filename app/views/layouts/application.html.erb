@@ -26,6 +26,7 @@
   <body>
     <nav>
       <%= link_to "Home", root_path %>
+      <%= button_to "Login", new_session_path, method: :get unless authenticated? %>
       <%= button_to "Log out", session_path, method: :delete if authenticated? %>
     </nav>
     <main>
